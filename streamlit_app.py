@@ -9,8 +9,6 @@ st.title("My parents new healthy dinner")
 st.write("Choose the fruits you'd like in your custom Smoothie!."
 )
 
-import streamlit as st
-
 name_on_order = st.text_input("What is your name")
 
 cnx = st.connection("snowflake")
@@ -19,7 +17,7 @@ my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT
 pdf_df=my_dataframe.to_pandas()
 st.dataframe(pdf_df)
 # st.dataframe(data=my_dataframe, use_container_width=True)
-st.stop()
+# st.stop()
 
 ingredients_list = st.multiselect(
     'Choose up to 5 ingredients:'
