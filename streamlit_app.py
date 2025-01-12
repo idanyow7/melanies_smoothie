@@ -11,7 +11,6 @@ st.write("Choose the fruits you'd like in your custom Smoothie!."
 import streamlit as st
 
 name_on_order = st.text_input("What is your name")
-st.write("Your fruits are", name_on_order)
 
 cnx = st.connection("snowflake")
 session = cnx.session()
